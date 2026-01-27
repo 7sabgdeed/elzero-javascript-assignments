@@ -1,0 +1,76 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    
+    <!--
+    
+    الكود الأول مش هيشتغل وهيطلع خطأ لأن كود ال
+    html لسه ما حملش
+    فانت بتطلب من الجافا سكريبت تعدلك كود مش موجود أساسا
+
+    "Code One" won't work and it will give an error,
+    because html code needs to be loaded first before javascript code,
+    so that javascript code can manipulate it.
+
+    -->
+    <script>
+      // Code One
+      document.getElementById("el").style.color = "red";
+    </script>
+
+
+    <!--
+
+    الكود الثاني مش هيطلع ايرور
+    مع انك حاطط كود الجافا سكريبت قبل كود ال
+    html
+    وده لأن الكود اللي في جافا سكريبت معناه استنى لحد ما كود
+    ال html 
+    يحمل وبعدها اشتغل
+
+
+    "Code Two" won't give an error even though we wrote the javaScript code first,
+    because the code we wrote inside the javaScript code means wait until the html code gets parsed then execute the instructions
+
+    -->
+
+    <script>
+      // Code Two
+      window.onload = function () {
+        document.getElementById("el").style.color = "red";
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="el">Page Title</h1>
+
+    <!--
+    
+    الكود رقم 3 هيتشغل كويس والنتيجة الأخيرة في الصفحة
+    هتكون منه لأنه مكتوب آخر حاجة
+    
+    "Code Three" will work flawlessly
+    because it's written after the html code
+    and will also override the preceding javascript code
+    because it's the most last one.
+
+    -->
+
+    <script>
+      // Code Three
+      
+      document.getElementById("el").style.color = "red";
+    </script>
+  </body>
+</html>
