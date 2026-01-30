@@ -14,12 +14,24 @@
     <title>Document</title>
 </head>
 <body>
+    
     <script>
-        console.log("%cElzero %cWeb %cSchool",
-        
-                    "color: red;font-size: 40px;",
-                    "color: green;font-size: 40px;font-weight: bold;",
-                    "color: blue;font-size: 40px;");
+
+        let num = "10";
+
+        // Solution One
+        console.log(+num + +num); // 20
+
+        // Solution Two
+        console.log(Number(num) * Number(num) / Number(num) + Number(num)); // 20
+
+        // Solution Three
+        console.log(-num + +num + +num + +num); // 20
+
+        // Solution Four
+        console.log(-num * -num / +num + +num); // 20
+
     </script>
+
 </body>
 </html>

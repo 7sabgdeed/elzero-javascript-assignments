@@ -1,0 +1,50 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Add Variables Here
+
+        let numberOne = 10, numberTwo = 20;
+
+        // Ouput
+        // console.log(String(numberOne) + numberTwo); // Normal Concatenate => 1020
+        console.log("" + numberOne + numberTwo); // Normal Concatenate => 1020
+        console.log(typeof(String(numberOne) + numberTwo)); // Normal Concatenate => String
+        console.log(`${numberOne}${numberTwo}`); // Template Literals Way => 1020
+        console.log(typeof(`${numberOne}${numberTwo}`)); // Template Literals Way => String
+
+        console.log(numberTwo + "\n" + numberOne);
+        /*
+        Normal Concatenate
+        20
+        10
+        */
+
+       console.log(`${numberTwo}\n${numberOne}`);
+
+       // لقيت واحد حله كده كمان
+
+       //        console.log(`${numberTwo}
+       // ${numberOne}`);
+       
+        /*
+        Template Literals Way
+        20
+        10
+        */
+    </script>
+</body>
+</html>
