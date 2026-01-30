@@ -14,14 +14,29 @@
     <title>Learn JavaScript</title>
     
     <!--
-    
-    الكود الأول مش هيشتغل وهيطلع خطأ لأن كود ال
-    html لسه ما حملش
-    فانت بتطلب من الجافا سكريبت تعدلك كود مش موجود أساسا
 
-    "Code One" won't work and it will give an error,
-    because html code needs to be loaded first before javascript code,
-    so that javascript code can manipulate it.
+    الكود رقم 1 هيطلع خطأ
+
+    لأن كود الجافا سكريبت هيشتغل الأول
+    قبل ما ال
+    html
+    يحمل
+
+    فمش هيعرف يعدل على لون العنصر اللي
+    id
+    بتاعه
+    el
+
+    لأن كود ال
+    html 
+    لسه محملش أساسا
+
+    فمن منظور الجافا سكريبت:
+    العنصر اللي
+    id
+    بتاعه
+    el
+    مش موجود
 
     -->
     <script>
@@ -33,15 +48,22 @@
     <!--
 
     الكود الثاني مش هيطلع ايرور
+
     مع انك حاطط كود الجافا سكريبت قبل كود ال
     html
+
     وده لأن الكود اللي في جافا سكريبت معناه استنى لحد ما كود
-    ال html 
+    ال
+    html 
     يحمل وبعدها اشتغل
 
 
-    "Code Two" won't give an error even though we wrote the javaScript code first,
-    because the code we wrote inside the javaScript code means wait until the html code gets parsed then execute the instructions
+    وهو اللي النتيجة بتاعته هتظهر في الآخر لأنه آخر كود هيشتغل إن شاء الله
+
+    وعشان تتأكد إن هو آخر كود هيشتغل جرب غير اللون اللي فيه للون تاني
+    وهتلاقي إن لون ال
+    h1
+    في الآخر هيكون هو اللون ده اللي انت كتبته هنا (في الكود رقم 2)
 
     -->
 
@@ -57,13 +79,11 @@
 
     <!--
     
-    الكود رقم 3 هيتشغل كويس والنتيجة الأخيرة في الصفحة
-    هتكون منه لأنه مكتوب آخر حاجة
-    
-    "Code Three" will work flawlessly
-    because it's written after the html code
-    and will also override the preceding javascript code
-    because it's the most last one.
+    الكود رقم 3 هيتشغل من غير خطأ
+
+    ولكن النتيجة بتاعته هتظهر لوقت قليل جدا
+
+    لأن الكود رقم 2 هيتشغل بعده علطول
 
     -->
 
