@@ -1,0 +1,38 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let arr1 = ["A", "C", "X"];
+        let arr2 = ["D", "E", "F", "Y"];
+        let allArrs = [];
+
+        // Your Code Here
+
+        
+        let firstLetter = arr2.slice((arr1.length - arr2.length) + (arr1.length - arr2.length), (arr1.length - arr2.length));
+        let secondLetter = arr1.slice(arr1.length - arr2.length);
+        let thirdLetter = arr2.slice(arr1.length - arr2.length);
+
+        allArrs = firstLetter.concat(secondLetter, thirdLetter).join("").toLowerCase();
+
+        console.log(allArrs); // fxy
+
+    </script>
+    
+</body>
+</html>
