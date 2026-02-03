@@ -1,0 +1,45 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let friends = ["Ahmed", "Sayed", "Ali", 1, 2, "Mahmoud", "Amany"];
+        let index = 0;
+        let counter = 0;
+
+        let zero = index;
+        let arrayLength = friends.length;
+
+        while(index < arrayLength) {
+
+            if (typeof(friends[index]) === "string" && friends[index][zero] !== friends[zero][zero]) {
+
+                counter++;
+                console.log(`${counter} => ${friends[index]}`);
+            }
+
+            index++;
+        }
+        
+        // Output
+        // "1 => Sayed"
+        // "2 => Mahmoud"
+
+    </script>
+
+</body>
+</html>
