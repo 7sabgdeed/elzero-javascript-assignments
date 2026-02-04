@@ -1,0 +1,57 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function multiply (...nums) {
+
+            let result = 1;
+            let numsLength = nums.length;
+
+            if (numsLength == 0) {
+
+                console.log(0);
+                return;
+            }
+            
+            for (let i = 0; i < numsLength; i++) {
+
+                if (Number.isInteger(nums[i])) {
+    
+                    result *= nums[i];
+
+                    
+                                                        // nums[i] % 1 === 0 ---> الرقم صحيح
+                                                        // nums[i] % 1 !== 0 ---> الرقم عشري
+                } else if (typeof(nums[i]) === "number" && nums[i] % 1 !== 0) {
+
+                    result *= parseInt(nums[i]);
+                }
+            }
+
+            
+            console.log(result);
+        }
+
+        multiply(10, 20); // 200
+        multiply("A", 10, 30); // 300
+        multiply(100.5, 10, "B"); // 1000
+
+    </script>
+
+</body>
+</html>

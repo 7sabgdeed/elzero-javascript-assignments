@@ -1,0 +1,62 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const MONTHS_IN_ONE_YEAR = 12;
+        const WEEKS_IN_ONE_MONTH = 4;
+        const DAYS_IN_ONE_WEEK = 7;
+        const HOURS_IN_ONE_DAY = 24;
+        const MINUTES_IN_ONE_HOUR = 60;
+        const SECONDS_IN_ONE_MINUTE = 60;
+
+        function ageInTime(theAge) {
+
+            if (!(theAge > 10 && theAge < 100)) {
+
+                console.log(`Age Out Of Range`);
+
+            } else {
+
+                let ageInMonths = theAge * MONTHS_IN_ONE_YEAR;
+                let ageInWeeks = ageInMonths * WEEKS_IN_ONE_MONTH;
+                let ageInDays = ageInWeeks * DAYS_IN_ONE_WEEK;
+                let ageInHours = ageInDays * HOURS_IN_ONE_DAY;
+                let ageInMinutes = ageInHours * MINUTES_IN_ONE_HOUR;
+                let ageInSeconds = ageInMinutes * SECONDS_IN_ONE_MINUTE;
+
+                console.log("");
+                console.log(`You have lived for: `);
+                console.log("");
+
+                console.log(`${ageInMonths} Months`);
+                console.log(`${ageInWeeks} Weeks`);
+                console.log(`${ageInDays} Days`);
+                console.log(`${ageInHours} Hours`);
+                console.log(`${ageInMinutes} Minutes`);
+                console.log(`${ageInSeconds} Seconds`);
+            }
+        }
+
+        // Needed Output
+        ageInTime(110); // Age Out Of Range
+        ageInTime(38); // Months Example => 456 Months
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    
+        function sayHello(theName, theGender) {
+
+            if (theGender === undefined) {
+
+                console.log(`Hello ${theName}`);
+            }
+            else if (theGender.toLowerCase() === "male") {
+
+                console.log(`Salam Mr ${theName ?? "user"}`);
+
+            } else if (theGender.toLowerCase() === "female") {
+
+                console.log(`Salam Miss ${theName ?? "user"}`);
+            }
+        }
+
+        // Needed Output
+        sayHello("Osama", "Male"); // "Hello Mr Osama"
+        sayHello("Eman", "Female"); // "Hello Miss Eman"
+        sayHello("Sameh"); // "Hello Sameh"
+
+    </script>
+
+</body>
+</html>
