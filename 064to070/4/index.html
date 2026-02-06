@@ -1,0 +1,46 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function specialMix(...data) {
+
+            let areAllStrings = true;
+            let dataLength = data.length;
+            let sum = 0;
+
+            for (let i = 0; i < dataLength; i++) {
+
+                if (!(isNaN(parseInt(data[i])))) {
+
+                    sum += parseInt(data[i]);
+                    areAllStrings = false;
+                }
+            }
+
+            return areAllStrings ? "All Are Strings" : sum;
+        }
+
+        console.log(specialMix(10, 20, 30));                        // 60
+        console.log(specialMix("10Test", "Testing", "20Cool"));     // 30
+        console.log(specialMix("Testing", "10Testing", "40Cool"));  // 50
+        console.log(specialMix("Test", "Cool", "Test"));            // All Are Strings
+
+    </script>
+
+</body>
+</html>
