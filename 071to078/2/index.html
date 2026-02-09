@@ -1,0 +1,50 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let myString = "EElllzzzzzzzeroo";
+
+        let uniqueString = myString.split("").filter(isUnique).join("");
+
+        function isUnique (eachChar, index, array) {
+
+            let charAppearedCounter = 0;
+            let arrayLength = array.length;
+
+            for (let i = index; i < arrayLength; i++) {
+
+                if (array[i] === eachChar) {
+
+                    charAppearedCounter++;
+                }
+
+                if (charAppearedCounter > 1) {
+
+                    break;
+                }
+            }
+
+            return charAppearedCounter === 1;
+        }
+
+        console.log(uniqueString);  // Elzero
+
+    </script>
+
+</body>
+</html>

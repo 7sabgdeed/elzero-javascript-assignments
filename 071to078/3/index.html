@@ -1,0 +1,46 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let myArray = ["E", "l", "z", ["e", "r"], "o"];
+
+        let newArray = myArray.reduce(flattenArray, "");
+
+        function flattenArray (result, currentElement) {
+
+            if (Array.isArray(currentElement)) {
+
+                if (currentElement.length === 0) {
+
+                    return result;
+                }
+                
+                return result + currentElement.reduce(flattenArray, "");
+        
+            } else {
+
+                return result + currentElement;
+            }
+        }
+
+        console.log(newArray);  // Elzero
+        
+    </script>
+    
+</body>
+</html>

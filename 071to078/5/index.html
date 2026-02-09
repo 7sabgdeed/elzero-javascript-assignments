@@ -1,0 +1,29 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let nums = [2, 12, 11, 5, 10, 1, 99];
+
+        let newArr = nums.reduce((accumulator, currentNum) => currentNum % 2 === 0 ? accumulator * currentNum : accumulator + currentNum, 1);
+        
+        console.log(newArr);    // 500
+
+    </script>
+
+</body>
+</html>
