@@ -1,3 +1,3 @@
 # elzero-javascript-assignments
 
-حل تكليفات javaScript بتاعت الزيرو
+حل تكليفات ال javaScript بتاعت الزيرو
