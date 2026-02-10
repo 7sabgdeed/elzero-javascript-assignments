@@ -1,0 +1,108 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // The Object To Work With
+
+        let myFavBooks = {
+            
+        "السنة لعبد الله بن أحمد": {
+
+            author: "عبد الله بن أحمد بن حنبل",
+            price: 44.41,
+        },
+
+        "الشريعة للآجري": {
+
+            author: "محمد بن الحسين الآجري",
+            
+            otherBooksFromTheAuther: {
+
+                one: "تحريم النرد والشطرنج والملاهي",
+                two: "أدب النفوس",
+                three: "فضل قيام الليل التهجد",
+            },
+
+            price: 48,
+        },
+
+        "السنة لأبي بكر الخلال": {
+
+            author: "أبو بكر أحمد بن محمد بن هارون الخلال",
+            
+            otherBooksFromTheAuther: {
+
+            one: "أحكام النساء",
+            two: "الأمر بالمعروف والنهي عن المنكر",
+            three: "أحكام أهل الملل والردة",
+            },
+
+            price: 27,
+        },
+
+        };
+
+        // Code One => How To Get Object Length ?
+        let objectLength = Object.entries(myFavBooks).length;
+
+        for (let i = 0; i < objectLength; i++) {
+
+            console.log(`إسم الكتاب هو: ${Object.entries(myFavBooks)[i][0]}`);
+            console.log(`الكاتب هو: ${myFavBooks[Object.entries(myFavBooks)[i][0]]["author"]}`);
+            console.log(`السعر هو: $${myFavBooks[Object.entries(myFavBooks)[i][0]]["price"]}`);
+
+            // Check If Nested Object Has Property (otherBooksFromTheAuther)
+            if (myFavBooks[Object.entries(myFavBooks)[i][0]]["otherBooksFromTheAuther"] !== undefined) {
+
+                console.log("كتب أخرى للمصنف -");
+                console.log(`First => ${myFavBooks[Object.entries(myFavBooks)[i][0]]["otherBooksFromTheAuther"]["one"]}`);
+                console.log(`Second => ${myFavBooks[Object.entries(myFavBooks)[i][0]]["otherBooksFromTheAuther"]["two"]}`);
+                console.log(`Third => ${myFavBooks[Object.entries(myFavBooks)[i][0]]["otherBooksFromTheAuther"]["three"]}`);
+            }
+            
+            console.log("#".repeat(20));
+        }
+
+
+        // Ouput
+
+        "اسم الكتاب هو السنة لعبد الله بن أحمد"
+        "المصنف هو عبد الله بن أحمد بن حنبل"
+        "سعر الكتاب هو $44.41"
+        "####################"
+        "اسم الكتاب هو الشريعة للآجري"
+        "المصنف هو محمد بن الحسين الآجري"
+        "سعر الكتاب هو $48"
+        "كتب أخرى للمصنف -"
+        "First => تحريم النرد والشطرنج والملاهي"
+        "Second => أدب النفوس"
+        "Third => فضل قيام الليل التهجد"
+        "####################"
+        "اسم الكتاب هو السنة لأبي بكر الخلال"
+        "المصنف هو أبو بكر أحمد بن محمد بن هارون الخلال"
+        "سعر الكتاب هو $27"
+        "كتب أخرى للمصنف -"
+        "First => أحكام النساء"
+        "Second => الأمر بالمعروف والنهي عن المنكر"
+        "Third => أحكام أهل الملل والردة"
+        "####################"
+
+    </script>
+
+</body>
+</html>

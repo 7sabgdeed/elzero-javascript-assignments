@@ -1,0 +1,57 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // Method One
+
+        let objMethodOne = {
+
+            property: "Method One",
+        };
+
+        console.log(objMethodOne.property); // "Method One"
+
+
+        // Method Two
+
+        let objMethodTwo = new Object({
+
+            property: "Method Two",
+        });
+
+        console.log(objMethodTwo.property); // "Method Two"
+
+
+        // Method Three
+
+        let objMethodThree = Object.create(objMethodTwo);
+
+        objMethodThree["property"] = "Method Three";
+
+        console.log(objMethodThree.property); // "Method Three"
+
+        // Method Four
+
+        let objMethodFour = Object.assign({}, {property: "Method Four"});
+
+        console.log(objMethodFour.property); // "Method Four"
+
+    </script>
+
+</body>
+</html>
