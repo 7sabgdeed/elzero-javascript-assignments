@@ -1,0 +1,50 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="count-from">10</div>
+
+    <script>
+
+        let ourDiv = document.querySelector(".count-from");
+        let numberInsideDiv = +ourDiv.textContent;
+
+
+        if ((!(isNaN(numberInsideDiv))) && numberInsideDiv >= 0) {
+
+
+            let minusCounter = setInterval(_ => {
+
+                
+                numberInsideDiv--;
+                ourDiv.textContent = `${numberInsideDiv}`;
+                
+                
+                if (numberInsideDiv === 0) {
+
+                    clearInterval(minusCounter);
+
+                } else if (numberInsideDiv === 5) {
+
+                    window.open("https://elzero.org/", "_blank", "top=0,left=500,width=300,height=300");
+                }
+
+            }, 1000);
+        }
+    
+    </script>
+</body>
+</html>

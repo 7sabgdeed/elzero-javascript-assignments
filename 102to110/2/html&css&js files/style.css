@@ -1,0 +1,46 @@
+* {
+
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.popup-container {
+
+    font-family: Arial;
+    background-color: #F6F3F4;
+    width: 700px;
+    margin: 40px auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    border: 2px solid #DEDCDD;
+    box-sizing: border-box;
+    display: none;
+}
+
+.close-button {
+
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translate(50%, -50%);
+    border-width: 0px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
