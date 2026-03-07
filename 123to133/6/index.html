@@ -1,0 +1,87 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let chars = ["A", "B", "C", "D", "E", 10, 15, 6];
+        // let chars = ["A", "B", "C", "D", "E"];
+        // let chars = [1, 2, 3, 4, 5, "a"];
+        // let chars = [10, 15, 6];
+        let charsLength = chars.length;
+        let indexToMoveNumberTo = 0;
+
+
+        for (let i = 0; i < charsLength; i++) {
+
+            if (!(isNaN(chars[i]))) {
+
+                if (i === indexToMoveNumberTo) {
+
+                    indexToMoveNumberTo++;
+                    continue;
+
+                } else {
+
+                    let num = chars[i];
+                    chars.splice(i, 1);
+                    chars.splice(indexToMoveNumberTo, 0, num);
+                    indexToMoveNumberTo++;
+                }
+            }
+        }
+
+
+
+        // الحل ده لو المقصود تغيير الأرقام بعدد الأحرف فقط
+
+        // if (indexToMoveNumberTo !== charsLength) {
+
+        //     chars.copyWithin(0, indexToMoveNumberTo, indexToMoveNumberTo * 2);
+        // }
+
+
+
+        // الحل ده لو المقصود تغيير جميع الأرقام حتى لو عدد الأرقام أكبر من عدد اﻷحرف
+
+        if (indexToMoveNumberTo !== charsLength) {
+
+            let indexOfCharToCopyIt = indexToMoveNumberTo;
+
+            for (let i = 0 ; i < indexToMoveNumberTo; i++) {
+
+                if (indexOfCharToCopyIt === charsLength) {
+
+                    indexOfCharToCopyIt = indexToMoveNumberTo;
+                }
+
+                chars[i] = chars[indexOfCharToCopyIt];
+                indexOfCharToCopyIt++;
+            }
+        }
+
+
+
+
+        console.log(chars);
+
+        // Needed Output
+        ['A', 'B', 'C', 'A', 'B', 'C', 'D', 'E']
+
+    </script>
+
+</body>
+</html>

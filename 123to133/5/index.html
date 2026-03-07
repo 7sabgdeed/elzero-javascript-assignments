@@ -1,0 +1,43 @@
+<!--
+اللهم صل وسلم على عبدك ورسولك وحبيبك وخليلك
+وجليسك على العرش يوم القيامة
+محمد صلى الله عليه وسلم
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let theName = "Elzero";
+
+        console.log(Array.from(theName));
+        console.log([...theName]);
+        console.log(theName.split(""));
+
+        let arrayOfChars = [];
+
+        for (let i = 0; i < theName.length; i++) {
+
+            arrayOfChars.push(theName[i]);
+        }
+
+        console.log(arrayOfChars);
+
+        console.log(Object.assign([], theName)); // بعد بحث على جوجل
+        
+        // Needed Output
+        ['E', 'l', 'z', 'e', 'r', 'o']
+
+    </script>
+
+</body>
+</html>
